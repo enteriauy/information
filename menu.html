@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú - Enteria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;700&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f1e8d9;
+      font-family: 'KoHo', sans-serif;
+      color: #363636;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Fondo */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 130vw;
+      height: 130vh;
+      background-image: url('vector_fondo_2.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    h1 {
+      font-weight: 900;
+    }
+
+    /* Estilo común para todas las tarjetas */
+    .menu-link {
+      background-color: rgba(212, 234, 124, 0.8); /* #d4ea7c con 80% de opacidad */
+      color: #363636;
+      border-bottom: 3px solid #ffffff; /* borde inferior */
+      border-right: 3px solid #ffffff;  /* borde derecho */
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+    }
+
+    .menu-link:hover {
+      background-color: rgba(216, 218, 103, 0.8); /* hover un poco más intenso */
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Pie de página */
+    .logo-footer {
+      width: 200px;
+      height: auto;
+      border-radius: 0.75rem;
+    }
+  </style>
+</head>
+<body class="p-10">
+  <!-- Fondo estático -->
+  <div class="background" id="background"></div>
+
+  <!-- Título -->
+  <h1 class="text-6xl text-center mb-10">Seleccione una opción</h1>
+
+  <!-- Tarjetas -->
+  <div class="grid gap-8 max-w-md mx-auto">
+    <a href="pagos.html" class="menu-link">Información para pagos</a>
+    <a href="flujo.html" class="menu-link">Flujo operativo</a>
+    <a href="analisis.html" class="menu-link">Información general de nuestros análisis</a>
+    <a href="recursos.html" class="menu-link">Recursos</a>
+  </div>
+
+  <!-- Logo fijo abajo a la derecha -->
+  <div class="fixed bottom-4 right-10 z-50">
+    <img src="desarrollado_por_enteria.png" alt="Logo Enteria" class="logo-footer shadow-md">
+  </div>
+</body>
+</html>
+

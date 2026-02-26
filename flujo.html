@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flujo Operativo - Enteria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://docs.google.com/forms/d/e/1FAIpQLSf9KC_jL0FUdfZu0bNXNHLW4OvJx4Ov839Mcn83FhenTgid1w/viewform?usp=dialog" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f1e8d9;
+      font-family: 'KoHo', sans-serif;
+      color: #363636;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 130vw;
+      height: 130vh;
+      background-image: url('vector_fondo_2.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    @media (max-width: 768px) {
+      .background {
+        transform: none !important;
+      }
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+
+    p {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 300;
+    }
+
+    .step-card {
+      background-color: rgba(216, 218, 103, 0.8);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-right: 4px solid #f1e8d9;
+      border-bottom: 4px solid #f1e8d9;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .step-card:nth-of-type(1) { animation-delay: 0.1s; }
+    .step-card:nth-of-type(2) { animation-delay: 0.3s; }
+    .step-card:nth-of-type(3) { animation-delay: 0.5s; }
+    .step-card:nth-of-type(4) { animation-delay: 0.7s; }
+    .step-card:nth-of-type(5) { animation-delay: 0.9s; }
+    .step-card:nth-of-type(6) { animation-delay: 1.1s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .step-number {
+      background-color: #a7669a;
+      color: white;
+    }
+
+    .important {
+      background-color: #fff8e1;
+      border-left: 4px solid #a7669a;
+    }
+
+    .btn-enteria {
+      background-color: #a7669a;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-enteria:hover {
+      background-color: #8a4c7f;
+    }
+  </style>
+</head>
+<body class="p-6">
+  <div class="background" id="background"></div>
+
+  <div class="max-w-3xl mx-auto relative z-10">
+    <div class="flex justify-center mb-8">
+      <img src="logo-enteria.png" alt="Logo Enteria" class="max-w-xs h-auto rounded-lg shadow-md">
+    </div>
+    <h1 class="text-3xl text-center mb-10">Flujo Operativo de Análisis</h1>
+
+    <div class="space-y-6">
+      <div class="step-card flex items-start gap-4">
+        <div class="step-number w-10 h-10 rounded-full flex items-center justify-center font-bold">1</div>
+        <div>
+          <h3 class="text-lg mb-1">Entrega del Kit</h3>
+          <p>El profesional de la salud entrega el kit de toma de muestra al paciente con instrucciones claras.</p>
+        </div>
+      </div>
+
+      <div class="step-card flex items-start gap-4">
+        <div class="step-number w-10 h-10 rounded-full flex items-center justify-center font-bold">2</div>
+        <div>
+          <h3 class="text-lg mb-1">Formulario Online</h3>
+          <p>La clínica completa el formulario digital.</p>
+          <a href="https://docs.google.com/forms/d/1Kwkjl8_OS1lOdflj5lYduwOVTseBmU2MhHsvSikWnpY/edit" target="_blank" class="text-sm underline text-[#363636] hover:text-[#a7669a] mt-1 inline-block">Acceder al formulario</a>
+        </div>
+      </div>
+
+      <div class="step-card flex items-start gap-4">
+        <div class="step-number w-10 h-10 rounded-full flex items-center justify-center font-bold">3</div>
+        <div>
+          <h3 class="text-lg mb-1">Envío de muestra</h3>
+          <p>La muestra debe enviarse a Enteria.</p>
+          <ul class="text-sm mt-2 ml-4 list-disc">
+          <li><span class="font-bold">Dirección:</span> Mercedes 1237, Montevideo</li>
+          <li><span class="font-bold">Horario:</span> Lunes a viernes de 09:00 a 17:00 hs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-card flex items-start gap-4">
+        <div class="step-number w-10 h-10 rounded-full flex items-center justify-center font-bold">4</div>
+        <div>
+          <h3 class="text-lg mb-1">Facturación</h3>
+          <p>Enteria emite factura a crédito a nombre de la clínica.</p>
+        </div>
+      </div>
+
+      <div class="step-card flex items-start gap-4">
+        <div class="step-number w-10 h-10 rounded-full flex items-center justify-center font-bold">5</div>
+        <div>
+          <h3 class="text-lg mb-1">Procesamiento</h3>
+          <p>La muestra es procesada en el laboratorio de Enteria.</p>
+        </div>
+      </div>
+
+      <div class="step-card flex items-start gap-4">
+        <div class="step-number w-10 h-10 rounded-full flex items-center justify-center font-bold">6</div>
+        <div>
+          <h3 class="text-lg mb-1">Entrega del Informe</h3>
+          <p>En 30 días corridos el informe está disponible en el área privada de la clínica.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="important mt-10 p-5 rounded-md shadow text-sm">
+      <h2 class="text-lg mb-2 font-bold">⚠️ Consideración importante</h2>
+      <p><strong>Tiempo crítico:</strong> desde la toma de la muestra hasta su llegada al laboratorio no deben pasar más de <strong>96 horas</strong>.</p>
+    </div>
+
+    <div class="flex justify-center mt-10">
+      <a href="menu.html">
+        <button class="btn-enteria font-semibold py-3 px-6 rounded-lg shadow-md">
+          ← Volver al menú principal
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Logo Enteria -->
+  <div class="fixed bottom-4 right-10 z-50">
+    <img src="desarrollado_por_enteria.png" alt="Logo Enteria" class="w-50 h-20 rounded-xl shadow-none">
+  </div>
+</body>
+</html>
