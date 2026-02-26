@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Información para pagos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;700&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f1e8d9;
+      font-family: 'KoHo', sans-serif;
+      color: #363636;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 130vw;
+      height: 130vh;
+      background-image: url('vector_fondo_2.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .card {
+      background-color: rgba(216, 218, 103, 0.8);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-right: 4px solid #f1e8d9;
+      border-bottom: 4px solid #f1e8d9;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.4s; }
+    .card:nth-child(4) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .btn-enteria {
+      background-color: #a7669a;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-enteria:hover {
+      background-color: #8a4c7f;
+    }
+
+    .logo-footer {
+      width: 200px;
+      height: auto;
+      border-radius: 0.75rem;
+    }
+  </style>
+</head>
+<body class="p-6">
+  <!-- Fondo -->
+  <div class="background" id="background"></div>
+
+  <div class="max-w-xl mx-auto mt-10 space-y-6 relative z-10">
+    <h2 class="text-2xl font-bold text-center mb-4">💳 Información de Pagos</h2>
+
+    <div class="card">
+      <h3 class="text-lg font-semibold mb-2">🏦 Transferencias dentro de Santander</h3>
+      <p><strong>Cuenta:</strong> 5101025308<br>
+         <strong>Moneda:</strong> USD<br>
+         <strong>Titular:</strong> DRAUNIA SA<br>
+         <strong>Sucursal:</strong> 02 - 18 De Julio</p>
+    </div>
+
+    <div class="card">
+      <h3 class="text-lg font-semibold mb-2">🏛️ Transferencias desde otros bancos</h3>
+      <p><strong>Cuenta:</strong> 0002005101025308<br>
+         <strong>Moneda:</strong> USD<br>
+         <strong>Titular:</strong> DRAUNIA SA</p>
+    </div>
+
+    <div class="card">
+      <h3 class="text-lg font-semibold mb-2">🌐 Pagos Internacionales vía PayPal</h3>
+      <p class="mb-4">
+        Puedes abonar desde el exterior utilizando PayPal. Este método es ideal para pagos internacionales con tarjeta.
+      </p>
+      <a href="https://www.paypal.com/" target="_blank" class="btn-enteria font-semibold py-2 px-4 rounded shadow-md">
+        Ir a PayPal
+      </a>
+    </div>
+
+    <div class="flex justify-center mt-10">
+      <a href="menu.html">
+        <button class="btn-enteria font-semibold py-3 px-6 rounded-lg shadow-md">
+          ← Volver al menú principal
+        </button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+
+
